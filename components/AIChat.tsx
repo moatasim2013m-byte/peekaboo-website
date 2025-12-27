@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -11,34 +12,19 @@ import { sendMessageToGemini } from '../services/geminiService';
 import { ChatMessage } from '../types';
 
 const PeekyAvatar = () => (
-  <div className="relative w-12 h-12 flex-shrink-0">
-    <div className="absolute top-0 left-0 w-full h-[65%] bg-[#E41E26] rounded-t-[50%] rounded-b-[20%] shadow-sm border-2 border-white">
-      <div className="absolute top-1.5 left-2 w-2.5 h-2.5 bg-white rounded-full opacity-90" />
-      <div className="absolute top-1 right-3 w-2 h-2 bg-white rounded-full opacity-90" />
-      <div className="absolute bottom-1 right-4 w-2.5 h-2.5 bg-white rounded-full opacity-90" />
-    </div>
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[65%] h-[55%] bg-white rounded-full border-2 border-[#5D3D2E]/10 flex flex-col items-center justify-center">
-      <div className="flex gap-2 mb-1 scale-75">
-        <div className="w-2 h-2 bg-[#3d2010] rounded-full relative">
-           <div className="absolute top-0.5 right-0.5 w-0.5 h-0.5 bg-white rounded-full" />
-        </div>
-        <div className="w-2 h-2 bg-[#3d2010] rounded-full relative">
-           <div className="absolute top-0.5 right-0.5 w-0.5 h-0.5 bg-white rounded-full" />
-        </div>
-      </div>
-      <div className="absolute bottom-[10%] flex items-center justify-center scale-[0.6]">
-        <div className="w-2 h-2 bg-[#E41E26] rotate-45 z-10" />
-        <div className="absolute -left-2 w-3 h-3 bg-[#E41E26] rounded-sm" />
-        <div className="absolute -right-2 w-3 h-3 bg-[#E41E26] rounded-sm" />
-      </div>
-    </div>
+  <div className="relative w-12 h-12 flex-shrink-0 bg-white rounded-full border-2 border-gray-100 shadow-sm overflow-hidden flex items-center justify-center">
+    <img 
+      src="input_file_0.png" 
+      alt="Peeky Mushroom Avatar" 
+      className="w-10 h-10 object-contain translate-y-0.5"
+    />
   </div>
 );
 
 const AIChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: "أهلاً بكم في بيكابو إربد! 🧸 أنا دينا، كيف يمكنني مساعدتكم اليوم؟ اسألوني عن عروضنا وحفلات أعياد الميلاد! 🎈" }
+    { role: 'model', text: "أهلاً بكم في بيكابو إربد! 🍄 أنا دينا، كيف يمكنني مساعدتكم اليوم؟ اسألوني عن عروضنا وحفلات أعياد الميلاد! 🎈" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -96,12 +82,12 @@ const AIChat: React.FC = () => {
           >
             <div className="bg-gradient-to-r from-[#E41E26] via-[#F7941D] to-[#FFD900] p-5 flex justify-between items-center text-white shrink-0">
               <div className="flex items-center gap-3">
-                <div className="bg-white/20 rounded-full p-2 backdrop-blur-sm">
-                  <Sparkles size={20} />
+                <div className="bg-white rounded-xl p-1 shadow-sm">
+                  <img src="input_file_1.png" alt="Logo" className="h-10 w-auto" />
                 </div>
                 <div>
                   <h3 className="font-black text-lg leading-tight">Dina @ Peekaboo</h3>
-                  <p className="text-[10px] opacity-90 font-black uppercase tracking-[0.2em]">AI Sales Manager 🧸</p>
+                  <p className="text-[10px] opacity-90 font-black uppercase tracking-[0.2em]">AI Sales Manager 🍄</p>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="bg-white/20 hover:bg-white/40 p-1.5 rounded-full transition-colors">
@@ -113,7 +99,7 @@ const AIChat: React.FC = () => {
               {messages.map((msg, idx) => (
                 <div key={idx} className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
                   {msg.role === 'model' && (
-                    <div className="bg-white rounded-full p-0.5 h-fit shadow-sm border border-gray-100 scale-75 origin-top-left shrink-0">
+                    <div className="shrink-0">
                       <PeekyAvatar />
                     </div>
                   )}
