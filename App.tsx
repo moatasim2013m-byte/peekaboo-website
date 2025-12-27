@@ -11,7 +11,7 @@ import MultiColorText from './components/GlitchText';
 import CustomCursor from './components/CustomCursor';
 import AttractionCard from './components/ArtistCard';
 import AIChat from './components/AIChat';
-import { Attraction } from './types';
+import { Attraction, PEEKABOO_DATA } from './types';
 
 type Language = 'ar' | 'en';
 
@@ -19,86 +19,68 @@ const TRANSLATIONS = {
   en: {
     nav: ['Zones', 'Perks', 'Tickets'],
     bookNow: 'Book Now',
-    tagline: "Playtown's Favorite Spot",
-    heroTitle: "Adventure awaits in every corner!",
-    heroSubtitle: "The Ultimate Playground Experience.",
-    ctaExplore: "See All Zones",
-    ctaParty: "Book Party",
-    zonesTitle: "Explore The Magic",
-    zonesBadge: "Ready, Set, Play!",
-    zonesDesc: "From sensory play for tiny tots to high-energy zones for big kids, Peeky has designed a world of fun for everyone.",
-    perksTitle: "Family Happiness Hub",
-    perksSubtitle: "Relaxed Parents",
-    perk1: "Fresh Brews",
-    perk1Desc: "Sip on premium coffee while keeping an eye on the fun.",
-    perk2: "Squeaky Clean",
-    perk2Desc: "Highest hygiene standards with hourly deep cleaning.",
-    perk3: "No Waiting",
-    perk3Desc: "Timed sessions ensure a safe and uncrowded environment.",
-    ticketsTitle: "Get Your Pass",
-    ticketsDesc: "Adventure is just a click away",
-    ticket1: "Little Scout",
-    ticket1Desc: "Toddlers (0-3) • 2 Hours",
-    ticket2: "Big Explorer",
-    ticket2Desc: "Kids (4+) • 2 Hours",
-    ticket3: "All Day Fun",
-    ticket3Desc: "All Ages • Unlimited Access",
-    price1: "$15",
-    price2: "$25",
-    price3: "$45",
+    tagline: "Irbid's Ultimate Adventure",
+    heroTitle: "Magic moments in every jump!",
+    heroSubtitle: "Welcome to Peekaboo Irbid.",
+    ctaExplore: "Discover Zones",
+    ctaParty: "Party Packages",
+    zonesTitle: "Our Play Universe",
+    zonesBadge: "Fun & Safety Combined!",
+    zonesDesc: "Hand-crafted experiences in Irbid, Jordan. We offer the best indoor playground for your little champions.",
+    perksTitle: "Parental Comfort Zone",
+    perksSubtitle: "Relax while they play",
+    perk1: "Fresh Sips",
+    perk1Desc: "Premium Turkish coffee and snacks while you supervise.",
+    perk2: "Elite Hygiene",
+    perk2Desc: "Medical-grade sanitation throughout the facility.",
+    perk3: "Extended Play",
+    perk3Desc: PEEKABOO_DATA.hours.en,
+    ticketsTitle: "Our Rates",
+    ticketsDesc: "Great value for unforgettable joy",
     bookBtn: "Book Session",
-    reserved: "Booked! ✨",
-    processing: "Just a sec... 🍄",
-    footerDesc: "Empowering kids through play, imagination, and colorful adventures.",
-    footerVisit: "Visit Us",
+    reserved: "Confirmed! ✨",
+    processing: "Wait for it... 🧸",
+    footerDesc: "Peekaboo Irbid: Where happiness meets safety. Join our community today.",
+    footerVisit: "Find Us",
     footerExplore: "Explore",
-    footerContact: "hello@peekaboo.fun",
-    footerAddress: "123 Fun Lane, Playtown",
-    footerHours: "9:00 AM - 8:00 PM",
-    copy: "© 2025 Peekaboo Fun Hub. All rights reserved.",
+    footerContact: PEEKABOO_DATA.contact.phone,
+    footerAddress: PEEKABOO_DATA.contact.location.en,
+    footerHours: PEEKABOO_DATA.hours.en,
+    copy: "© 2025 Peekaboo Jordan. All rights reserved.",
     ageLabel: "Recommended",
     closeBtn: "Close",
   },
   ar: {
     nav: ['المناطق', 'الميزات', 'التذاكر'],
     bookNow: 'احجز الآن',
-    tagline: "المكان المفضل في مدينة الألعاب",
-    heroTitle: "المغامرة تنتظركم في كل زاوية!",
-    heroSubtitle: "تجربة اللعب المثالية لأطفالكم.",
-    ctaExplore: "استكشف المناطق",
-    ctaParty: "احجز حفلة",
-    zonesTitle: "استكشف السحر",
-    zonesBadge: "استعد، انطلق، العب!",
-    zonesDesc: "من ألعاب الحواس للصغار إلى مناطق الطاقة العالية للكبار، صمم بيكابو عالماً من المرح للجميع.",
-    perksTitle: "مركز سعادة العائلة",
-    perksSubtitle: "راحة الوالدين",
+    tagline: "المكان الأروع في إربد",
+    heroTitle: "لحظات سحرية في كل قفزة!",
+    heroSubtitle: "أهلاً بكم في بيكابو إربد.",
+    ctaExplore: "اكتشف المناطق",
+    ctaParty: "عروض الحفلات",
+    zonesTitle: "عالم اللعب الخاص بنا",
+    zonesBadge: "المرح والأمان معاً!",
+    zonesDesc: "تجارب مصممة بعناية في إربد، الأردن. نقدم أفضل ملعب داخلي لأبطالكم الصغار.",
+    perksTitle: "منطقة راحة الأهل",
+    perksSubtitle: "استرخِ بينما يلعبون",
     perk1: "قهوة طازجة",
-    perk1Desc: "استمتع بالقهوة المختصة بينما تراقب أطفالك وهم يمرحون.",
+    perk1Desc: "قهوة تركية فاخرة ووجبات خفيفة أثناء المراقبة.",
     perk2: "نظافة مثالية",
-    perk2Desc: "أعلى معايير النظافة مع تعقيم دوري كل ساعة.",
-    perk3: "لا انتظار",
-    perk3Desc: "جلسات محددة الوقت تضمن بيئة آمنة وغير مزدحمة.",
-    ticketsTitle: "احصل على تذكرتك",
-    ticketsDesc: "المغامرة على بعد نقرة واحدة",
-    ticket1: "المستكشف الصغير",
-    ticket1Desc: "الصغار (0-3) • ساعتان",
-    ticket2: "المغامر الكبير",
-    ticket2Desc: "الأطفال (4+) • ساعتان",
-    ticket3: "مرح طوال اليوم",
-    ticket3Desc: "جميع الأعمار • دخول غير محدود",
-    price1: "٥٥ ر.س",
-    price2: "٩٥ ر.س",
-    price3: "١٦٥ ر.س",
+    perk2Desc: "تعقيم طبي شامل في جميع أنحاء المنشأة.",
+    perk3: "أوقات ممتدة",
+    perk3Desc: PEEKABOO_DATA.hours.ar,
+    ticketsTitle: "أسعارنا",
+    ticketsDesc: "قيمة رائعة لبهجة لا تُنسى",
     bookBtn: "احجز الآن",
-    reserved: "تم الحجز! ✨",
-    processing: "لحظة واحدة... 🍄",
-    footerDesc: "تمكين الأطفال من خلال اللعب، الخيال، والمغامرات الملونة.",
-    footerVisit: "زرنا الآن",
+    reserved: "تم التأكيد! ✨",
+    processing: "لحظة من فضلك... 🧸",
+    footerDesc: "بيكابو إربد: حيث تلتقي السعادة بالأمان. انضم إلى مجتمعنا اليوم.",
+    footerVisit: "موقعنا",
     footerExplore: "استكشف",
-    footerContact: "hello@peekaboo.fun",
-    footerAddress: "١٢٣ شارع المرح، مدينة اللعب",
-    footerHours: "٩:٠٠ صباحاً - ٨:٠٠ مساءً",
-    copy: "© ٢٠٢٥ بيكابو. جميع الحقوق محفوظة.",
+    footerContact: PEEKABOO_DATA.contact.phone,
+    footerAddress: PEEKABOO_DATA.contact.location.ar,
+    footerHours: PEEKABOO_DATA.hours.ar,
+    copy: "© ٢٠٢٥ بيكابو الأردن. جميع الحقوق محفوظة.",
     ageLabel: "العمر الموصى به",
     closeBtn: "إغلاق",
   }
@@ -107,51 +89,27 @@ const TRANSLATIONS = {
 const ZONES_DATA = (lang: Language): Attraction[] => [
   { 
     id: '1', 
-    name: lang === 'ar' ? 'مجرة كرات المرح' : 'Ball Pit Galaxy', 
+    name: lang === 'ar' ? 'مجرة الكرات' : 'Ball Pit Galaxy', 
     category: lang === 'ar' ? 'لعب نشط' : 'Active Play', 
     ageGroup: lang === 'ar' ? 'جميع الأعمار' : 'All Ages', 
     image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'اغطس في بحر من الكرات الملونة! يتم تعقيمها كل ساعة وتتميز ببلاط ضوئي تفاعلي.' : 'Dive into a sea of colorful spheres! Our giant ball pit is sanitized hourly and features interactive light-up tiles.'
+    description: lang === 'ar' ? 'بحر من الكرات الملونة مع إضاءة تفاعلية تجعل اللعب تجربة خيالية.' : 'A sea of colorful balls with interactive lighting that makes play a magical experience.'
   },
   { 
     id: '2', 
-    name: lang === 'ar' ? 'سفاري الغابة' : 'Jungle Safari', 
-    category: lang === 'ar' ? 'تسلق' : 'Climbing', 
-    ageGroup: lang === 'ar' ? '+4 سنوات' : '4+ Years', 
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'تنقل عبر الأنفاق الناعمة والجسور والمنزلقات اللولبية. مغامرة آمنة للمستكشفين الصغار.' : 'Navigate through soft tunnels, rope bridges, and spiral slides. A safe jungle adventure for little explorers.'
+    name: lang === 'ar' ? 'ترامبولين التحدي' : 'Action Trampoline', 
+    category: lang === 'ar' ? 'قفز' : 'Jumping', 
+    ageGroup: lang === 'ar' ? '+٣ سنوات' : '3+ Years', 
+    image: 'https://images.unsplash.com/photo-154433334d-0683030368a5?q=80&w=1000&auto=format&fit=crop',
+    description: lang === 'ar' ? 'منطقة قفز آمنة وممتعة لتعزيز اللياقة والبهجة لدى الأطفال.' : 'A safe and fun jumping zone to boost fitness and joy for children.'
   },
   { 
     id: '3', 
-    name: lang === 'ar' ? 'مدينة الصغار' : 'Toddler Town', 
-    category: lang === 'ar' ? 'لعب ناعم' : 'Soft Play', 
-    ageGroup: lang === 'ar' ? '0-3 سنوات' : '0-3 Years', 
-    image: 'https://images.unsplash.com/photo-154433334d-0683030368a5?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'منطقة هادئة مخصصة لأصغر ضيوفنا. تتميز بلوحات حسية وأشكال رغوية ناعمة.' : 'A dedicated quiet zone for our smallest guests. Featuring sensory boards and soft foam shapes.'
-  },
-  { 
-    id: '4', 
-    name: lang === 'ar' ? 'مركز الإبداع' : 'Creative Hub', 
-    category: lang === 'ar' ? 'فنون وحرف' : 'Arts & Crafts', 
-    ageGroup: lang === 'ar' ? '+3 سنوات' : '3+ Years', 
+    name: lang === 'ar' ? 'ركن الفنون' : 'Art Corner', 
+    category: lang === 'ar' ? 'إبداع' : 'Creative', 
+    ageGroup: lang === 'ar' ? '٢-١٠ سنوات' : '2-10 Years', 
     image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'دع خيالهم ينطلق مع الرمل الحركي، ومكعبات الليغو العملاقة، والأنشطة اليومية.' : 'Let their imagination run wild with kinetic sand, giant LEGO blocks, and daily guided craft activities.'
-  },
-  { 
-    id: '5', 
-    name: lang === 'ar' ? 'اكتشاف الواقع الافتراضي' : 'VR Discovery', 
-    category: lang === 'ar' ? 'رقمي' : 'Digital', 
-    ageGroup: lang === 'ar' ? '+6 سنوات' : '6+ Years', 
-    image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'تجارب واقع افتراضي تعليمية تأخذ الأطفال إلى القمر أو أعماق المحيط.' : 'Educational virtual reality experiences that take children to the moon or under the ocean.'
-  },
-  { 
-    id: '6', 
-    name: lang === 'ar' ? 'قصر الحفلات' : 'Party Palace', 
-    category: lang === 'ar' ? 'فعاليات خاصة' : 'Private Events', 
-    ageGroup: lang === 'ar' ? 'جميع الأعمار' : 'All Ages', 
-    image: 'https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=1000&auto=format&fit=crop',
-    description: lang === 'ar' ? 'وجهة عيد الميلاد المثالية! غرف خاصة مع مضيف مخصص وبيتزا وسمات مخصصة.' : 'The ultimate birthday destination! Private rooms come with a dedicated host and personalized themes.'
+    description: lang === 'ar' ? 'أنشطة يومية تشمل التلوين والأشغال اليدوية لتنمية المهارات الفنية.' : 'Daily activities including coloring and handcrafts to develop artistic skills.'
   },
 ];
 
@@ -455,11 +413,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { name: t.ticket1, price: t.price1, desc: t.ticket1Desc, color: '#8CC63F' },
-              { name: t.ticket2, price: t.price2, desc: t.ticket2Desc, color: '#E41E26' },
-              { name: t.ticket3, price: t.price3, desc: t.ticket3Desc, color: '#00ADEF' },
-            ].map((ticket, i) => {
+            {PEEKABOO_DATA.tickets.map((ticket, i) => {
               const isPurchased = purchasedIndex === i;
               const isPurchasing = purchasingIndex === i;
 
@@ -467,23 +421,30 @@ const App: React.FC = () => {
                 <motion.div
                   key={i}
                   whileHover={{ y: -20, rotate: i % 2 === 0 ? 1 : -1 }}
-                  className="bg-white p-14 rounded-[4rem] shadow-2xl border-8 flex flex-col items-center text-center group"
+                  className="bg-white p-14 rounded-[4rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.1)] border-8 flex flex-col items-center text-center group"
                   style={{ borderColor: `${ticket.color}15` }}
                 >
-                  <div className="w-24 h-24 rounded-full flex items-center justify-center mb-10" style={{ backgroundColor: `${ticket.color}15`, color: ticket.color }}>
+                  <div className="w-24 h-24 rounded-full flex items-center justify-center mb-10 transition-transform group-hover:scale-125" style={{ backgroundColor: `${ticket.color}15`, color: ticket.color }}>
                      <Baby className="w-12 h-12" strokeWidth={4} />
                   </div>
-                  <h3 className="text-4xl font-black mb-4 tracking-tight">{ticket.name}</h3>
-                  <p className="text-gray-400 mb-10 font-bold text-lg">{ticket.desc}</p>
+                  <h3 className="text-4xl font-black mb-4 tracking-tight">
+                    {isRTL ? ticket.nameAr : ticket.name}
+                  </h3>
+                  <p className="text-gray-400 mb-10 font-bold text-lg">
+                    {isRTL ? ticket.descAr : ticket.desc}
+                  </p>
                   
-                  <div className="text-6xl font-black mb-14" style={{ color: ticket.color }}>
+                  <div className="text-7xl font-black mb-14" style={{ color: ticket.color }}>
                     {ticket.price}
                   </div>
                   
                   <ul className={`space-y-6 mb-16 text-gray-500 font-bold text-lg w-full ${isRTL ? 'text-right' : 'text-left'}`}>
-                    <li className="flex items-center gap-4"><Star className="w-6 h-6 shrink-0" style={{ color: ticket.color }} /> {lang === 'ar' ? 'دخول كامل لجميع المناطق' : 'Full Playground Access'}</li>
-                    <li className="flex items-center gap-4"><Star className="w-6 h-6 shrink-0" style={{ color: ticket.color }} /> {lang === 'ar' ? 'دخول مجاني لمرافق واحد' : '1 Free Adult Entry'}</li>
-                    <li className="flex items-center gap-4"><Star className="w-6 h-6 shrink-0" style={{ color: ticket.color }} /> {lang === 'ar' ? 'واي فاي عالي السرعة' : 'High Speed Parent Wi-Fi'}</li>
+                    {(isRTL ? ticket.featuresAr : ticket.features).map((feat, fIdx) => (
+                      <li key={fIdx} className="flex items-center gap-4">
+                        <Star className="w-6 h-6 shrink-0" style={{ color: ticket.color }} /> 
+                        {feat}
+                      </li>
+                    ))}
                   </ul>
                   
                   <button 
@@ -491,7 +452,7 @@ const App: React.FC = () => {
                     disabled={isPurchased}
                     style={{ backgroundColor: isPurchased ? '#F3F4F6' : ticket.color }}
                     className={`w-full py-6 rounded-[2.5rem] font-black text-xl text-white transition-all shadow-2xl ${
-                      !isPurchased ? 'hover:scale-105 active:scale-95' : 'text-gray-400'
+                      !isPurchased ? 'hover:scale-105 active:scale-95 hover:brightness-110 shadow-black/10' : 'text-gray-400'
                     }`}
                   >
                     {isPurchasing ? t.processing : isPurchased ? t.reserved : t.bookBtn}
